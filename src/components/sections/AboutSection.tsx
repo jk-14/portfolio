@@ -1,59 +1,7 @@
-import { useEffect, useRef, useState } from 'react'
 import FadeContent from '@/components/ui/FadeContent'
 import SplitText from '@/components/ui/SplitText'
 // @ts-expect-error — JS React Bits component, no type declarations
 import SpotlightCard from '@/components/ui/SpotlightCard'
-
-interface StatCardProps {
-  value: number
-  label: string
-  suffix?: string
-}
-
-function StatCard({ value, label, suffix = '+' }: StatCardProps) {
-  const ref = useRef<HTMLDivElement>(null)
-  const [count, setCount] = useState(0)
-  const animated = useRef(false)
-
-  useEffect(() => {
-    const el = ref.current
-    if (!el) return
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !animated.current) {
-          animated.current = true
-          const duration = 1500
-          const start = performance.now()
-          const tick = (now: number) => {
-            const progress = Math.min((now - start) / duration, 1)
-            const eased = 1 - Math.pow(1 - progress, 3)
-            setCount(Math.round(eased * value))
-            if (progress < 1) requestAnimationFrame(tick)
-          }
-          requestAnimationFrame(tick)
-          observer.disconnect()
-        }
-      },
-      { threshold: 0.5 }
-    )
-    observer.observe(el)
-    return () => observer.disconnect()
-  }, [value])
-
-  return (
-    <SpotlightCard
-      className="text-center flex flex-col items-center gap-2"
-      spotlightColor="rgba(0, 212, 255, 0.15)"
-    >
-      <div ref={ref}>
-        <span className="font-display text-4xl font-bold text-accent">
-          {count}{suffix}
-        </span>
-      </div>
-      <span className="text-text-muted text-sm">{label}</span>
-    </SpotlightCard>
-  )
-}
 
 export function AboutSection() {
   return (
@@ -77,14 +25,11 @@ export function AboutSection() {
           <FadeContent delay={100}>
             <div className="space-y-4 text-text-muted leading-relaxed">
               <p>
-                [PLACEHOLDER — short bio paragraph from .docx. Should highlight experience,
-                expertise in React/TypeScript, and passion for building scalable systems.]
-              </p>
-              <p>
-                [PLACEHOLDER — second paragraph about approach, values, or notable achievements.]
-              </p>
-              <p className="text-accent font-medium mt-6">
-                Currently open to Senior Full Stack / Frontend roles in Toronto.
+                I am a driven Senior Developer with 10 years of experience building resilient digital tools for FinTech and SaaS.
+                While my core expertise lies in React, Node.js, Next.js and Vue.js my current focus is at the intersection of web architecture and Artificial Intelligence.
+                <br/>
+                From integrating multi-system enterprise platforms to deploying AI agents and integrating MCP servers, I specialize in creating intelligent, automated systems that
+                solve real-world problems. I build with a focus on scalability, user-centric design, and the technical precision required for enterprise-scale impact.
               </p>
             </div>
           </FadeContent>
@@ -92,9 +37,20 @@ export function AboutSection() {
           {/* Stat cards */}
           <FadeContent delay={200}>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              <StatCard value={8} label="Years Experience" suffix="+" />
-              <StatCard value={4} label="Companies" suffix="" />
-              <StatCard value={15} label="Technologies" suffix="+" />
+              <SpotlightCard className="text-center flex flex-col items-center gap-2" spotlightColor="rgba(0, 212, 255, 0.15)">
+                <span className="font-display text-4xl font-bold text-accent">10+</span>
+                <span className="text-text-muted text-sm">Years Experience</span>
+              </SpotlightCard>
+
+              <SpotlightCard className="text-center flex flex-col items-center gap-2" spotlightColor="rgba(0, 212, 255, 0.15)">
+                <span className="font-display text-4xl font-bold text-accent">4</span>
+                <span className="text-text-muted text-sm">Companies</span>
+              </SpotlightCard>
+
+              <SpotlightCard className="text-center flex flex-col items-center gap-2" spotlightColor="rgba(0, 212, 255, 0.15)">
+                <span className="font-display text-4xl font-bold text-accent">15+</span>
+                <span className="text-text-muted text-sm">Technologies</span>
+              </SpotlightCard>
             </div>
           </FadeContent>
         </div>

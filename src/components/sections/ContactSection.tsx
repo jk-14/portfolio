@@ -34,7 +34,7 @@ export function ContactSection() {
             id="contact-heading"
             className="font-display text-3xl sm:text-4xl font-bold text-text-primary mb-16 text-center"
           >
-            <SplitText text="Get In Touch" tag="span" />
+            <SplitText text="Contact" tag="span" />
           </h2>
         </FadeContent>
 

@@ -7,7 +7,7 @@ export function HomeSection() {
     <section
       id="home"
       aria-labelledby="home-heading"
-      className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-background"
+      className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-background select-none"
     >
       {/* Plasma background — lazy loaded */}
       <div className="absolute inset-0 bg-background">
@@ -37,20 +37,21 @@ export function HomeSection() {
           Jatin Kapil
         </h1>
 
-        <p className="font-display text-xl sm:text-2xl text-accent mb-4">
+        <p className="font-display font-medium text-xl sm:text-2xl text-accent mb-4">
           Senior Software Developer
         </p>
 
-        <p className="text-text-muted text-base sm:text-lg max-w-xl mx-auto mb-10">
-          [PLACEHOLDER — one-line tagline describing expertise and value proposition]
+        <p className="text-text-muted text-base sm:text-lg max-w-xl mx-auto mb-10" style={{ animation: 'fadeInUp 0.8s ease 0.2s both' }}>
+        A dedicated Software Engineer with expertise in turning complex technical challenges into elegant, scalable web solutions.
         </p>
 
         <div className="flex items-center justify-center">
           <a
             href="#contact"
-            className="px-8 py-3 rounded-lg border border-accent/40 text-accent font-display font-bold text-sm hover:border-accent hover:bg-accent/10 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+            className="btn-glass focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           >
-            Get In Touch
+            <span>Contact  Me</span>
+            <span className="icon-wrap" aria-hidden="true">→</span>
           </a>
         </div>
       </div>

@@ -13,7 +13,7 @@ export default {
         violet: '#627998',
         tertiary: '#e8b8b0',
         'text-primary': '#E8EAF0',
-        'text-muted': '#74777d',
+        'text-muted': '#adafb3',
       },
       fontFamily: {
         display: ['"Space Grotesk"', 'sans-serif'],
