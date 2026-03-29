@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm create:*)",
+      "Bash(printf \"y\\\\n\")",
+      "Bash(npx create-vite@latest . --template react-ts)",
+      "Bash(npx shadcn@latest add \"https://reactbits.dev/r/Aurora-TS-TW\" --yes)",
+      "WebFetch(domain:reactbits.dev)",
+      "WebFetch(domain:www.npmjs.com)",
+      "Bash(npm show:*)",
+      "Bash(curl -s \"https://reactbits.dev/r/Marquee-TS-TW\")",
+      "Bash(npx shadcn@latest add @react-bits/Aurora-TS-TW --overwrite)",
+      "Bash(npx shadcn@latest add @react-bits/BlurText-TS-TW --overwrite)",
+      "Bash(npx shadcn@latest add @react-bits/SplitText-TS-TW --overwrite)",
+      "Bash(npx shadcn@latest add @react-bits/FadeContent-TS-TW --overwrite)",
+      "Bash(npx shadcn@latest add @react-bits/Plasma-TS-TW --overwrite)"
+    ]
+  }
+}

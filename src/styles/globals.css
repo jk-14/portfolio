@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #0A0A0F;
+    color: #E8EAF0;
+    font-family: 'Inter', sans-serif;
+  }
+
+  section {
+    scroll-margin-top: 80px;
+  }
+
+  *:focus-visible {
+    @apply outline-none ring-2 ring-accent ring-offset-2 ring-offset-background;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  .glass {
+    background: rgba(15, 15, 24, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .dot-grid {
+    background-image: radial-gradient(rgba(72, 142, 212, 0.08) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+}
