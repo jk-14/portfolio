@@ -15,19 +15,25 @@ export default function App() {
   return (
     <>
       <Helmet>
-        <title>Jatin Kapil — Senior Full Stack Developer</title>
+        <title>Jatin Kapil | Senior Software Engineer</title>
         <meta
           name="description"
-          content="[PLACEHOLDER — 155 chars max: compelling description of Jatin's expertise and value]"
+          content="Senior Software Engineer specialising in React, Node.js, and AI-driven systems. Based in Toronto."
         />
-        <meta property="og:title" content="Jatin Kapil — Senior Full Stack Developer" />
-        <meta property="og:description" content="[PLACEHOLDER — OG description]" />
+        <meta property="og:title" content="Jatin Kapil — Senior Software Engineer" />
+        <meta
+          property="og:description"
+          content="Senior Software Engineer specialising in React, Node.js, and AI-driven systems. Based in Toronto."
+        />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={SITE_URL} />
         <meta property="og:image" content={OG_IMAGE} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Jatin Kapil — Senior Full Stack Developer" />
-        <meta name="twitter:description" content="[PLACEHOLDER — Twitter description]" />
+        <meta name="twitter:title" content="Jatin Kapil — Senior Software Engineer" />
+        <meta
+          name="twitter:description"
+          content="Senior Software Engineer specialising in React, Node.js, and AI-driven systems. Based in Toronto."
+        />
         <meta name="twitter:image" content={OG_IMAGE} />
         <link rel="canonical" href={SITE_URL} />
       </Helmet>

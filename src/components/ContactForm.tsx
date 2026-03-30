@@ -7,7 +7,7 @@ const LIMITS = {
   message: 5000,
 }
 
-const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+const EMAIL_REGEX = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
 
 interface FormValues {
   name: string
@@ -27,7 +27,7 @@ function validateField(field: keyof FormValues, value: string): string | undefin
   if (field === 'name' && trimmed.length < 2) return 'Name must be at least 2 characters.'
   if (field === 'name' && trimmed.length > LIMITS.name)
     return `Name must be ${LIMITS.name} characters or fewer.`
-  if (field === 'email' && !EMAIL_RE.test(trimmed)) return 'Please enter a valid email address.'
+  if (field === 'email' && !EMAIL_REGEX.test(trimmed)) return 'Please enter a valid email address.'
   if (field === 'email' && trimmed.length > LIMITS.email)
     return `Email must be ${LIMITS.email} characters or fewer.`
   if (field === 'message' && trimmed.length < 10) return 'Message must be at least 10 characters.'
