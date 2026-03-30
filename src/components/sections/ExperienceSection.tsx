@@ -38,28 +38,23 @@ export function ExperienceSection() {
                     aria-hidden="true"
                   />
 
-                  <div className="glass rounded-xl p-6">
+                  <div className="relative bg-background-alt rounded-xl p-6 border border-accent/20 shadow-[0_0_18px_rgba(72,142,212,0.10),0_4px_24px_rgba(0,0,0,0.5)] transition-all duration-200 hover:shadow-[0_0_28px_rgba(72,142,212,0.22),0_8px_32px_rgba(0,0,0,0.6)] overflow-hidden group">
+                    {/* Left accent stripe */}
+                    <div className="absolute left-0 top-0 bottom-0 w-[3px] bg-gradient-to-b from-accent/80 via-accent/40 to-transparent rounded-l-xl" aria-hidden="true" />
                     <div className={`flex flex-col gap-1 mb-3 ${i % 2 === 0 ? 'md:items-end' : ''}`}>
                       <div className="flex flex-wrap items-center gap-2 justify-between">
                         <span className="font-display font-bold text-text-primary">
                           {entry.company}
                         </span>
-                        {entry.current && (
-                          <span className="text-xs px-2 py-0.5 rounded-full bg-accent/10 text-accent border border-accent/20">
-                            Current
-                          </span>
-                        )}
                       </div>
                       <p className="text-accent font-medium text-sm">{entry.role}</p>
                       <p className="text-text-muted text-xs">{entry.dateRange}</p>
                     </div>
 
-                    <ul className={`space-y-1.5 text-text-muted text-sm leading-relaxed ${i % 2 === 0 ? 'md:text-right' : ''}`}>
+                    <ul className="text-text-muted text-sm leading-relaxed text-left">
                       {entry.bullets.map((bullet, bi) => (
-                        <li key={bi} className="flex gap-2">
-                          <span className="text-accent/60 shrink-0 mt-0.5" aria-hidden="true">
-                            ▸
-                          </span>
+                        <li key={bi}>
+                          {bi !== 0 && <div className="h-px bg-accent/25 my-2.5" aria-hidden="true" />}
                           {bullet}
                         </li>
                       ))}

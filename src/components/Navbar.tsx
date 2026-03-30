@@ -41,7 +41,7 @@ export function Navbar() {
             className="font-display text-lg font-semibold text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded"
             aria-label="Jatin Kapil — back to top"
           >
-            Jatin Kapil
+            JK
           </a>
 
           {/* Desktop links */}

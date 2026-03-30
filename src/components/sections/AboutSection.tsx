@@ -23,12 +23,13 @@ export function AboutSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Bio */}
           <FadeContent delay={100}>
-            <div className="space-y-4 text-text-muted leading-relaxed">
+            <div className="space-y-5 text-text-muted text-lg leading-loose">
               <p>
-                I am a driven Senior Developer with 10 years of experience building resilient digital tools for FinTech and SaaS.
-                While my core expertise lies in React, Node.js, Next.js and Vue.js my current focus is at the intersection of web architecture and Artificial Intelligence.
-                <br/>
-                From integrating multi-system enterprise platforms to deploying AI agents and integrating MCP servers, I specialize in creating intelligent, automated systems that
+                I am a driven Senior Developer with 10 years of experience building resilient digital tools for <strong className="text-text-primary font-semibold">FinTech and SaaS</strong>.
+                While my core expertise lies in <strong className="text-text-primary font-semibold">React, Node.js, Next.js and Vue.js</strong>, my current focus is at the intersection of web architecture and Artificial Intelligence.
+              </p>
+              <p>
+                From integrating multi-system enterprise platforms to <strong className="text-text-primary font-semibold">deploying AI agents and integrating MCP servers</strong>, I specialize in creating intelligent, automated systems that
                 solve real-world problems. I build with a focus on scalability, user-centric design, and the technical precision required for enterprise-scale impact.
               </p>
             </div>

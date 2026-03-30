@@ -1,8 +1,16 @@
-import { lazy, Suspense } from 'react'
+import { lazy, Suspense, useEffect, useState } from 'react'
 
 const Plasma = lazy(() => import('@/components/ui/Plasma'))
 
 export function HomeSection() {
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 120)
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
   return (
     <section
       id="home"
@@ -37,8 +45,8 @@ export function HomeSection() {
           Jatin Kapil
         </h1>
 
-        <p className="font-display font-medium text-xl sm:text-2xl text-accent mb-4">
-          Senior Software Developer
+        <p className="font-display font-medium italic text-xl sm:text-2xl text-accent mb-4">
+          Senior Software Engineer
         </p>
 
         <p className="text-text-muted text-base sm:text-lg max-w-xl mx-auto mb-10" style={{ animation: 'fadeInUp 0.8s ease 0.2s both' }}>
@@ -66,7 +74,7 @@ export function HomeSection() {
       {/* Scroll indicator */}
       <a
         href="#about"
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-text-muted hover:text-accent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded"
+        className={`absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-text-muted hover:text-accent transition-all duration-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded ${scrolled ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
         aria-label="Scroll to About section"
       >
         <span className="text-xs tracking-widest uppercase">Scroll</span>
