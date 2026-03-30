@@ -5,11 +5,7 @@ import SpotlightCard from '@/components/ui/SpotlightCard'
 
 export function AboutSection() {
   return (
-    <section
-      id="about"
-      aria-labelledby="about-heading"
-      className="py-24 px-6 bg-background-alt"
-    >
+    <section id="about" aria-labelledby="about-heading" className="py-24 px-6 bg-background-alt">
       <div className="mx-auto max-w-7xl">
         <FadeContent>
           <h2
@@ -25,12 +21,24 @@ export function AboutSection() {
           <FadeContent delay={100}>
             <div className="space-y-5 text-text-muted text-lg leading-loose">
               <p>
-                I am a driven Senior Developer with 10 years of experience building resilient digital tools for <strong className="text-text-primary font-semibold">FinTech and SaaS</strong>.
-                While my core expertise lies in <strong className="text-text-primary font-semibold">React, Node.js, Next.js and Vue.js</strong>, my current focus is at the intersection of web architecture and Artificial Intelligence.
+                I am a driven Senior Developer with 10 years of experience building resilient
+                digital tools for{' '}
+                <strong className="text-text-primary font-semibold">FinTech and SaaS</strong>. While
+                my core expertise lies in{' '}
+                <strong className="text-text-primary font-semibold">
+                  React, Node.js, Next.js and Vue.js
+                </strong>
+                , my current focus is at the intersection of web architecture and Artificial
+                Intelligence.
               </p>
               <p>
-                From integrating multi-system enterprise platforms to <strong className="text-text-primary font-semibold">deploying AI agents and integrating MCP servers</strong>, I specialize in creating intelligent, automated systems that
-                solve real-world problems. I build with a focus on scalability, user-centric design, and the technical precision required for enterprise-scale impact.
+                From integrating multi-system enterprise platforms to{' '}
+                <strong className="text-text-primary font-semibold">
+                  deploying AI agents and integrating MCP servers
+                </strong>
+                , I specialize in creating intelligent, automated systems that solve real-world
+                problems. I build with a focus on scalability, user-centric design, and the
+                technical precision required for enterprise-scale impact.
               </p>
             </div>
           </FadeContent>
@@ -38,17 +46,26 @@ export function AboutSection() {
           {/* Stat cards */}
           <FadeContent delay={200}>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              <SpotlightCard className="text-center flex flex-col items-center gap-2" spotlightColor="rgba(0, 212, 255, 0.15)">
+              <SpotlightCard
+                className="text-center flex flex-col items-center gap-2"
+                spotlightColor="rgba(0, 212, 255, 0.15)"
+              >
                 <span className="font-display text-4xl font-bold text-accent">10+</span>
                 <span className="text-text-muted text-sm">Years Experience</span>
               </SpotlightCard>
 
-              <SpotlightCard className="text-center flex flex-col items-center gap-2" spotlightColor="rgba(0, 212, 255, 0.15)">
+              <SpotlightCard
+                className="text-center flex flex-col items-center gap-2"
+                spotlightColor="rgba(0, 212, 255, 0.15)"
+              >
                 <span className="font-display text-4xl font-bold text-accent">4</span>
                 <span className="text-text-muted text-sm">Companies</span>
               </SpotlightCard>
 
-              <SpotlightCard className="text-center flex flex-col items-center gap-2" spotlightColor="rgba(0, 212, 255, 0.15)">
+              <SpotlightCard
+                className="text-center flex flex-col items-center gap-2"
+                spotlightColor="rgba(0, 212, 255, 0.15)"
+              >
                 <span className="font-display text-4xl font-bold text-accent">15+</span>
                 <span className="text-text-muted text-sm">Technologies</span>
               </SpotlightCard>

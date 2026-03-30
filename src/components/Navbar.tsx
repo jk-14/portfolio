@@ -72,9 +72,15 @@ export function Navbar() {
             aria-controls="mobile-menu"
             onClick={() => setMenuOpen((v) => !v)}
           >
-            <span className={`block h-0.5 w-5 bg-text-primary transition-transform duration-200 ${menuOpen ? 'translate-y-2 rotate-45' : ''}`} />
-            <span className={`block h-0.5 w-5 bg-text-primary transition-opacity duration-200 ${menuOpen ? 'opacity-0' : ''}`} />
-            <span className={`block h-0.5 w-5 bg-text-primary transition-transform duration-200 ${menuOpen ? '-translate-y-2 -rotate-45' : ''}`} />
+            <span
+              className={`block h-0.5 w-5 bg-text-primary transition-transform duration-200 ${menuOpen ? 'translate-y-2 rotate-45' : ''}`}
+            />
+            <span
+              className={`block h-0.5 w-5 bg-text-primary transition-opacity duration-200 ${menuOpen ? 'opacity-0' : ''}`}
+            />
+            <span
+              className={`block h-0.5 w-5 bg-text-primary transition-transform duration-200 ${menuOpen ? '-translate-y-2 -rotate-45' : ''}`}
+            />
           </button>
         </div>
 

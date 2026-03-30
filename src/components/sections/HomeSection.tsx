@@ -32,11 +32,13 @@ export function HomeSection() {
       </div>
 
       {/* Dot-grid overlay */}
-      <div className="absolute inset-0 dot-grid opacity-30 pointer-events-none" aria-hidden="true" />
+      <div
+        className="absolute inset-0 dot-grid opacity-30 pointer-events-none"
+        aria-hidden="true"
+      />
 
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-
         <h1
           id="home-heading"
           className="font-display font-bold leading-tight text-text-primary mb-4"
@@ -49,8 +51,12 @@ export function HomeSection() {
           Senior Software Engineer
         </p>
 
-        <p className="text-text-muted text-base sm:text-lg max-w-xl mx-auto mb-10" style={{ animation: 'fadeInUp 0.8s ease 0.2s both' }}>
-        A dedicated Software Engineer with expertise in turning complex technical challenges into elegant, scalable web solutions.
+        <p
+          className="text-text-muted text-base sm:text-lg max-w-xl mx-auto mb-10"
+          style={{ animation: 'fadeInUp 0.8s ease 0.2s both' }}
+        >
+          A dedicated Software Engineer with expertise in turning complex technical challenges into
+          elegant, scalable web solutions.
         </p>
 
         <div className="flex items-center justify-center">
@@ -58,8 +64,10 @@ export function HomeSection() {
             href="#contact"
             className="btn-glass focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           >
-            <span>Contact  Me</span>
-            <span className="icon-wrap" aria-hidden="true">→</span>
+            <span>Contact Me</span>
+            <span className="icon-wrap" aria-hidden="true">
+              →
+            </span>
           </a>
         </div>
       </div>

@@ -21,10 +21,7 @@ export default function App() {
           content="[PLACEHOLDER — 155 chars max: compelling description of Jatin's expertise and value]"
         />
         <meta property="og:title" content="Jatin Kapil — Senior Full Stack Developer" />
-        <meta
-          property="og:description"
-          content="[PLACEHOLDER — OG description]"
-        />
+        <meta property="og:description" content="[PLACEHOLDER — OG description]" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={SITE_URL} />
         <meta property="og:image" content={OG_IMAGE} />

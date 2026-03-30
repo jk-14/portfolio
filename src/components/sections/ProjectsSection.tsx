@@ -42,11 +42,7 @@ function GithubIcon() {
 
 export function ProjectsSection() {
   return (
-    <section
-      id="projects"
-      aria-labelledby="projects-heading"
-      className="py-24 px-6 bg-background"
-    >
+    <section id="projects" aria-labelledby="projects-heading" className="py-24 px-6 bg-background">
       <div className="mx-auto max-w-7xl">
         <FadeContent>
           <h2
@@ -89,16 +85,18 @@ export function ProjectsSection() {
                       <GithubIcon />
                       Code
                     </a>
-                    <a
-                      href={project.liveUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={`${project.title} live demo`}
-                      className="flex items-center gap-1.5 text-text-muted text-xs hover:text-accent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded"
-                    >
-                      <ExternalLinkIcon />
-                      Live Demo
-                    </a>
+                    {project.liveUrl && (
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`${project.title} live demo`}
+                        className="flex items-center gap-1.5 text-text-muted text-xs hover:text-accent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded"
+                      >
+                        <ExternalLinkIcon />
+                        Live Demo
+                      </a>
+                    )}
                   </div>
                 </div>
               </SpotlightCard>

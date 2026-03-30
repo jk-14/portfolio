@@ -6,20 +6,13 @@ export const projects: Project[] = [
     description: '[PLACEHOLDER — project description]',
     techTags: ['[PLACEHOLDER]', '[PLACEHOLDER]', '[PLACEHOLDER]'],
     githubUrl: '#',
-    liveUrl: '#',
+    liveUrl: '',
   },
   {
     title: 'Project 2',
     description: '[PLACEHOLDER — project description]',
     techTags: ['[PLACEHOLDER]', '[PLACEHOLDER]', '[PLACEHOLDER]'],
     githubUrl: '#',
-    liveUrl: '#',
-  },
-  {
-    title: 'Project 3',
-    description: '[PLACEHOLDER — project description]',
-    techTags: ['[PLACEHOLDER]', '[PLACEHOLDER]', '[PLACEHOLDER]'],
-    githubUrl: '#',
-    liveUrl: '#',
+    liveUrl: '',
   },
 ]
