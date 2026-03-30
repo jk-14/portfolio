@@ -21,8 +21,8 @@ export function AboutSection() {
           <FadeContent delay={100}>
             <div className="space-y-5 text-text-muted text-lg leading-loose">
               <p>
-                I am a driven Senior Developer with 10 years of experience building resilient
-                digital tools for{' '}
+                I am a driven Senior Developer with 10 years of experience building robust and scalable
+                web apps for{' '}
                 <strong className="text-text-primary font-semibold">FinTech and SaaS</strong>. While
                 my core expertise lies in{' '}
                 <strong className="text-text-primary font-semibold">
@@ -34,7 +34,7 @@ export function AboutSection() {
               <p>
                 From integrating multi-system enterprise platforms to{' '}
                 <strong className="text-text-primary font-semibold">
-                  deploying AI agents and integrating MCP servers
+                  utilizing AI agents and integrating MCP servers
                 </strong>
                 , I specialize in creating intelligent, automated systems that solve real-world
                 problems. I build with a focus on scalability, user-centric design, and the
