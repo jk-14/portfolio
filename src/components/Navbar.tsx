@@ -31,7 +31,7 @@ export function Navbar() {
       className={`fixed top-4 left-0 right-0 z-50 flex justify-center px-6 transition-transform duration-300 ${isHidden ? '-translate-y-[120%]' : 'translate-y-0'}`}
     >
       <nav
-        className="glass border border-accent/40 rounded-full px-6 lg:px-10 w-full max-w-3xl shadow-[0_0_24px_rgba(72,142,212,0.25),0_8px_32px_rgba(0,0,0,0.6)]"
+        className="glass border border-accent/70 rounded-full px-6 lg:px-10 w-full max-w-3xl shadow-[0_0_10px_rgba(72,142,212,0.55),0_0_32px_rgba(72,142,212,0.25),0_8px_32px_rgba(0,0,0,0.6)]"
         aria-label="Main navigation"
       >
         <div className="flex items-center justify-between h-[56px]">

@@ -1,6 +1,5 @@
-import { lazy, Suspense, useEffect, useState } from 'react'
-
-const Plasma = lazy(() => import('@/components/ui/Plasma'))
+import { useEffect, useState } from 'react'
+import { Plasma } from '@/components/ui/Plasma'
 
 export function HomeSection() {
   const [scrolled, setScrolled] = useState(false)
@@ -19,16 +18,7 @@ export function HomeSection() {
     >
       {/* Plasma background — lazy loaded */}
       <div className="absolute inset-0 bg-background">
-        <Suspense fallback={null}>
-          <Plasma
-            color="#488ed4"
-            speed={0.6}
-            direction="forward"
-            scale={1.3}
-            opacity={0.4}
-            mouseInteractive={false}
-          />
-        </Suspense>
+        <Plasma opacity={0.4} />
       </div>
 
       {/* Dot-grid overlay */}
