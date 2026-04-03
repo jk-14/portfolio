@@ -4,57 +4,6 @@ Personal developer portfolio built with React 18, TypeScript, Vite, and Tailwind
 
 Live: https://jk-14.github.io/portfolio
 
-## Local Development
-
-```bash
-# Install dependencies
-npm install
-
-# Copy env example and fill in your Formspree form ID
-cp .env.example .env
-
-# Start dev server
-npm run dev
-```
-
-Open http://localhost:5173
-
-## Environment Variables
-
-| Variable | Description |
-|---|---|
-| `VITE_FORMSPREE_ID` | Your Formspree form ID (get one free at formspree.io) |
-
-Create a `.env` file at the project root (never commit it):
-
-```env
-VITE_FORMSPREE_ID=your_form_id_here
-```
-
-## Deployment to GitHub Pages
-
-Ensure the repo remote is `https://github.com/jk-14/portfolio` and the `gh-pages` branch exists (created automatically on first deploy).
-
-```bash
-npm run deploy
-```
-
-This runs `npm run build` then pushes the `dist/` folder to the `gh-pages` branch.
-
-## Replacing Placeholders
-
-All placeholder content is marked with `[PLACEHOLDER ...]` in the source files:
-
-| File | What to fill in |
-|---|---|
-| `src/data/experience.ts` | Role dates and bullet points (from .docx) |
-| `src/data/projects.ts` | Project titles, descriptions, tech tags, URLs |
-| `src/components/sections/HeroSection.tsx` | One-line tagline |
-| `src/components/sections/AboutSection.tsx` | Bio paragraphs, stat numbers |
-| `src/components/sections/ContactSection.tsx` | GitHub URL |
-| `src/App.tsx` | SEO meta description |
-| `public/og-image.svg` | Replace with a real 1200×630 OG image |
-
 ## Tech Stack
 
 - **React 18** + **TypeScript** (strict mode)
@@ -80,3 +29,38 @@ src/
 ├── types/index.ts      ← Shared TypeScript interfaces
 └── utils/cn.ts         ← clsx + tailwind-merge helper
 ```
+
+## Local Development
+
+```bash
+# Install dependencies
+npm install
+
+# Copy env example and fill in your Formspree form ID
+cp .env.example .env
+
+# Start dev server
+npm run dev
+```
+
+Open http://localhost:5173
+
+## Environment Variables
+
+| Variable | Description |
+|---|---|
+| `VITE_FORMSPREE_ID` | Formspree form ID for the contact form |
+
+Create a `.env` file at the project root (never commit it):
+
+```env
+VITE_FORMSPREE_ID=your_form_id_here
+```
+
+## Deployment
+
+```bash
+npm run deploy
+```
+
+Builds the project and pushes the `dist/` folder to the `gh-pages` branch.
